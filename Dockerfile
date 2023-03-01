@@ -1,10 +1,13 @@
 FROM node:16
 
 ENV NODE_ENV=production
-ENV ACTUALDATAPATH=/actualdata
+ENV ACTUALDBPATH=/server-files
+ENV ACTUALUSERPATH=/user-files
 ENV SYNCDATAPATH=/syncdata
 
 RUN mkdir /actualdata
+RUN mkdir /actualdata/server-files
+RUN mkdir /actualdata/user-files
 RUN mkdir /syncdata
 RUN mkdir /server
 
