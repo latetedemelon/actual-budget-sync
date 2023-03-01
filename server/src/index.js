@@ -54,9 +54,9 @@ async function loadBudgetAccounts() {
         await actual.closeBudget()
     }
 }
-const actualDataPath = process.env.ACTUALDATAPATH
-const dataDbPath = path.join(actualDataPath, 'server-files', 'account.sqlite')
-const userPath = path.join(actualDataPath, 'user-files')
+const actualDbPath = process.env.ACTUALDBPATH
+const userPath = process.env.ACTUALUSERPATH
+const dataDbPath = path.join(actualDbPath, 'account.sqlite')
 const syncDataPath = process.env.SYNCDATAPATH
 let serverDb
 
