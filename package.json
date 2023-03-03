@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/lancepick/actual-budget-sync#readme",
   "dependencies": {
-    "@lancepick-org/actual-app-api": "^4.0.3",
+    "@actual-app/api": "^4.0.3",
     "sqlite3": "^5.0.9"
   },
   "devDependencies": {
