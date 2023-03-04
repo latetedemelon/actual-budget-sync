@@ -1,0 +1,29 @@
+FROM alpine as base
+RUN apk add --no-cache nodejs yarn npm python3 openssl build-base
+ENV NODE_ENV=production
+
+ENV BUDGETDATA=/app/server-files
+ENV USERDATA=/app/user-files
+ENV SYNCDATA=/app/sync-data
+
+WORKDIR /app
+
+COPY ./server/yarn.lock /app/yarn.lock
+COPY ./server/package.json /app/package.json
+#RUN yarn install
+RUN yarn install --production
+
+COPY ./server ./
+
+FROM alpine as prod
+RUN apk add --no-cache nodejs yarn openssl tini
+WORKDIR /app
+COPY --from=base /app /app
+ADD . .
+
+ENV BUDGETDATA=/app/server-files
+ENV USERDATA=/app/user-files
+ENV SYNCDATA=/app/sync-data
+
+EXPOSE 8080
+CMD ["node", "./src/index.js"]
