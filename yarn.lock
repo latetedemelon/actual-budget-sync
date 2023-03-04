@@ -28,13 +28,13 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@lancepick-org/actual-app-api@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@lancepick-org/actual-app-api/-/actual-app-api-4.0.3.tgz#745d1ad064339c054329c1b1b6e54c155a7d4880"
-  integrity sha512-JKOGQjbNJKrcYALGVOmSQronfE6rQxxjXX0eunoiLLoJtBaYirqA046Q2FtjmupON0O9kn37yuHAeY/4Xmfijg==
+"@actual-app/api@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@actual-app/api/-/api-5.0.0.tgz#1390b5d742d82841325c229094a5b97630fb82ed"
+  integrity sha512-LKev4BGtIFD+gODIFXZtu4Ki8OWGYKre77YdEB5OL2x9bPRrO1SMckfgsZ7z4cS2Hkr9rR8v54zJjuhwG4ng7Q==
   dependencies:
     better-sqlite3 "^7.5.0"
-    node-fetch "^1.6.3"
+    node-fetch "^2.6.9"
     uuid "3.3.2"
 
 "@mapbox/node-pre-gyp@^1.0.0":

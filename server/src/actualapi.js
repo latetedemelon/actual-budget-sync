@@ -1,4 +1,4 @@
-import _api from '@lancepick-org/actual-app-api'
+import _api from '@actual-app/api'
 
 export class ActualApi {
   async _init(dataDir, budgetId){
