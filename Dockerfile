@@ -5,19 +5,16 @@ ENV ACTUALDBPATH=/server-files
 ENV ACTUALUSERPATH=/user-files
 ENV SYNCDATAPATH=/syncdata
 
-RUN mkdir /actualdata
-RUN mkdir /actualdata/server-files
-RUN mkdir /actualdata/user-files
-RUN mkdir /syncdata
-RUN mkdir /server
-
-WORKDIR /server
+WORKDIR /app
+RUN mkdir /app/server-files
+RUN mkdir /app/user-files
+RUN mkdir /app/sync-data
 
 COPY ./server/yarn.lock ./
 COPY ./server/package.json ./
 RUN yarn install
 
-COPY ./server .
+COPY ./server ./app
 
 EXPOSE 8080
 
