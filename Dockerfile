@@ -1,9 +1,9 @@
 FROM node:16
 
 ENV NODE_ENV=production
-ENV ACTUALDBPATH=/server-files
-ENV ACTUALUSERPATH=/user-files
-ENV SYNCDATAPATH=/syncdata
+ENV BUDGETDATA=/app/server-files
+ENV USERDATA=/user-files
+ENV SYNCDATA=/syncdata
 
 WORKDIR /app
 RUN mkdir /app/server-files
