@@ -54,10 +54,11 @@ async function loadBudgetAccounts() {
         await actual.closeBudget()
     }
 }
-const actualDbPath = process.env.BUDGETDATA
-const userPath = process.env.USERDATA
+const actualDbPath = process.env.ACTUAL_SERVER_FILE
+const userPath = process.env.ACTUAL_USER_FILES
 const dataDbPath = path.join(actualDbPath, 'account.sqlite')
-const syncDataPath = process.env.SYNCDATA
+const syncDataPath = process.env.ACTUAL_SIMPLEFIN_FILES
+
 let serverDb
 
 const db = new sqlite3.Database(path.join(syncDataPath, 'actualbudgetsync.sqlite3'), async (err) => {
