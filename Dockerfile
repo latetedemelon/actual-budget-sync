@@ -1,11 +1,12 @@
 FROM node:16
 
 ENV NODE_ENV=production
-ENV BUDGETDATA=/app/server-files
-ENV USERDATA=/app/user-files
-ENV SYNCDATA=/app/sync-files
 
-WORKDIR /app
+ENV ACTUAL_SERVER_FILES=/data/server-files
+ENV ACTUAL_USER_FILES=/data/user-files
+ENV ACTUAL_SIMPLEFIN_FILES=/data/simplefin-files
+
+WORKDIR /simplefin
 
 COPY ./server/yarn.lock ./
 COPY ./server/package.json ./
